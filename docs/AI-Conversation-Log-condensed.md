@@ -27,6 +27,7 @@
 14. [Windows instructions](#14-windows-instructions)
 15. [Demo plan](#15-demo-plan)
 16. [What was left out of this condensed log](#16-what-was-left-out-of-this-condensed-log)
+17. [Lighter moments](#17-lighter-moments)
 
 ---
 
@@ -447,3 +448,13 @@ The full conversation (link at the top) also contains:
   - an Azure deployment guide ([DEPLOY_AZURE.md](DEPLOY_AZURE.md));
   - handoff and interview-prep documents;
   - a go-live checklist spreadsheet.
+
+---
+
+## 17. Lighter moments
+
+All three really happened; the details are in the full log.
+
+- **The missing cent.** For a while, the store filter was convinced that €19.99 costs €19.98. Floating-point arithmetic (`19.99 * 100 = 1998.9999…`) was quietly dropping a cent. A regression test now guards it, and the fix is one `math.Round`.
+- **Azure and the free tier.** We ticked every box needed for a free Azure database: Burstable B1ms, 32 GiB, no high availability, no geo-redundancy. The cost panel showed "Free" in green. Azure replied: *"Deployment validation failed… policy violation."* Neon took about two minutes.
+- **`eldn rng`.** Typed while testing the typo-tolerant search, it found *Elden Ring* every time. It became the project's unofficial motto: a good search forgives you.
