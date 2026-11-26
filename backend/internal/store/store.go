@@ -14,7 +14,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/krm-demo/timoha-projects/backend/internal/catalog"
+	"github.com/Timochik/eneba-market/backend/internal/catalog"
 )
 
 //go:embed seed/products.json

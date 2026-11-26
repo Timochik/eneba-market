@@ -15,7 +15,7 @@ import (
 	"github.com/jackc/pgx/v5/pgconn"
 	_ "github.com/jackc/pgx/v5/stdlib" // registers the "pgx" database/sql driver
 
-	"github.com/krm-demo/timoha-projects/backend/internal/catalog"
+	"github.com/Timochik/eneba-market/backend/internal/catalog"
 )
 
 //go:embed schema.sql

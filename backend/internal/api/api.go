@@ -13,11 +13,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/krm-demo/timoha-projects/backend/internal/auth"
-	"github.com/krm-demo/timoha-projects/backend/internal/catalog"
-	"github.com/krm-demo/timoha-projects/backend/internal/home"
-	"github.com/krm-demo/timoha-projects/backend/internal/payments"
-	"github.com/krm-demo/timoha-projects/backend/internal/store"
+	"github.com/Timochik/eneba-market/backend/internal/auth"
+	"github.com/Timochik/eneba-market/backend/internal/catalog"
+	"github.com/Timochik/eneba-market/backend/internal/home"
+	"github.com/Timochik/eneba-market/backend/internal/payments"
+	"github.com/Timochik/eneba-market/backend/internal/store"
 )
 
 type Server struct {

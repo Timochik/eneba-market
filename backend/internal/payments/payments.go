@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/krm-demo/timoha-projects/backend/internal/catalog"
+	"github.com/Timochik/eneba-market/backend/internal/catalog"
 )
 
 // Card is what the checkout form sends.

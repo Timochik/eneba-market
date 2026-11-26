@@ -5,7 +5,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/krm-demo/timoha-projects/backend/internal/catalog"
+	"github.com/Timochik/eneba-market/backend/internal/catalog"
 )
 
 // runContract checks behaviour every Store implementation must share.

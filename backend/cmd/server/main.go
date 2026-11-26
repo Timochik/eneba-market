@@ -23,9 +23,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/krm-demo/timoha-projects/backend/internal/api"
-	"github.com/krm-demo/timoha-projects/backend/internal/auth"
-	"github.com/krm-demo/timoha-projects/backend/internal/store"
+	"github.com/Timochik/eneba-market/backend/internal/api"
+	"github.com/Timochik/eneba-market/backend/internal/auth"
+	"github.com/Timochik/eneba-market/backend/internal/store"
 )
 
 func env(key, def string) string {

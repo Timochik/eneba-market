@@ -4,5 +4,5 @@
 // You can also try any backend without editing: open the site with ?api=<url>.
 // If the API is unreachable the site falls back to the static demo data.
 window.TM_API_BASE = location.hostname.endsWith('github.io')
-  ? 'https://timoha-api.vercel.app'
+  ? 'https://eneba-market-api.vercel.app'
   : '';

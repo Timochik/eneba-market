@@ -1,8 +1,8 @@
-# timoha-projects — Timoha Market
+# eneba-market — Timoha Market
 
 A digital-keys marketplace in Eneba's style, built for the **Eneba Intern Assignment 2027**.
 
-- **Frontend** (`web/`): a static SPA (vanilla JS, hash router). Preview: https://krm-demo.github.io/timoha-projects/
+- **Frontend** (`web/`): a static SPA (vanilla JS, hash router). Preview: https://timochik.github.io/eneba-market/
 - **Backend** (`backend/`): a Go REST API with fuzzy search, homepage block services, auth, simulated checkout and orders.
 
 The frontend checks `/api/health` when it loads. If the API answers, everything goes through the API and the header shows **Live API**. If not, as on GitHub Pages without a backend, it uses the static JSON in `web/data/` and keeps accounts and orders in the browser. The header then shows **Static demo**.
@@ -13,7 +13,7 @@ All data is demo data: prices and sellers are made up, and payments are simulate
 
 | File | For |
 |---|---|
-| [docs/HANDOFF.md](docs/HANDOFF.md) | **Start here when you take over:** copy the repo, rename, enable Pages, deploy to Render, submission checklist |
+| [docs/HANDOFF.md](docs/HANDOFF.md) · [Windows](docs/HANDOFF_WINDOWS.md) | **Start here when you take over:** copy the repo, rename, enable Pages, deploy to Render, submission checklist |
 | [docs/ROADMAP.md](docs/ROADMAP.md) · [RU](docs/ROADMAP-ru.md) | Next steps with estimates: React + TypeScript port (required), smart search, deployment, EN/DE, backend ideas |
 | [docs/SMART_SEARCH.md](docs/SMART_SEARCH.md) · [RU](docs/SMART_SEARCH-ru.md) | **The proposed differentiator:** search that turns queries into pills, groups listings by game and shows which keys work in the buyer's country |
 | [docs/DEPLOY_WINDOWS.md](docs/DEPLOY_WINDOWS.md) | The same run/deploy commands for **Windows PowerShell** (no `&&`, `$env:` instead of `export`) |
@@ -107,7 +107,7 @@ sequenceDiagram
 
 - **Transport:** plain REST over HTTPS with JSON bodies. Every response is either data or `{"error": "..."}` with a meaningful HTTP status, which the UI shows to the user as is.
 - **Single entry point in the UI:** `web/data.js` exposes one interface (`DS.list`, `DS.product`, `DS.checkout`, …) with two implementations. `app.js` doesn't know whether it is talking to the API or to static files. This is why the GitHub Pages preview works without a server.
-- **Same origin or cross-origin:** if the Go server serves `web/` itself, the frontend calls `/api/...` on the same origin. If the frontend stays on GitHub Pages and the API runs on Render, the browser makes cross-origin requests. The API allows them through CORS (`ALLOWED_ORIGINS=https://krm-demo.github.io`).
+- **Same origin or cross-origin:** if the Go server serves `web/` itself, the frontend calls `/api/...` on the same origin. If the frontend stays on GitHub Pages and the API runs on Render, the browser makes cross-origin requests. The API allows them through CORS (`ALLOWED_ORIGINS=https://timochik.github.io`).
 - **Stateless auth:** the server keeps no sessions. A signed JWT carries the user id and expiry. Any API instance can verify it with `JWT_SECRET`, so the API can be scaled horizontally.
 - **Trust boundary:** the client sends only *what* to buy (product, seller, quantity). Prices, stock, totals and keys are all decided on the server inside one transaction.
 

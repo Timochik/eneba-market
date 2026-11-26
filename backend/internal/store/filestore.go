@@ -12,7 +12,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/krm-demo/timoha-projects/backend/internal/catalog"
+	"github.com/Timochik/eneba-market/backend/internal/catalog"
 )
 
 // FileStore keeps everything in memory and writes a JSON snapshot to disk

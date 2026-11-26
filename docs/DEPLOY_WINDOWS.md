@@ -31,11 +31,11 @@ go version          # must say go1.24 or newer
 
 ```powershell
 cd $HOME
-git clone https://github.com/krm-demo/timoha-projects.git
-cd timoha-projects\backend
+git clone https://github.com/Timochik/eneba-market.git
+cd eneba-market\backend
 ```
 
-`pwd` must now end with `\timoha-projects\backend`.
+`pwd` must now end with `\eneba-market\backend`.
 
 ## 3. Run locally with the built-in file database (no setup)
 
@@ -87,7 +87,7 @@ Needs Docker Desktop for Windows.
 docker run -p 8080:8080 `
   -e DATABASE_URL='postgresql://<user>:<password>@<host>/neondb?sslmode=require' `
   -e JWT_SECRET='<secret>' `
-  ghcr.io/krm-demo/timoha-projects:latest
+  ghcr.io/timochik/eneba-market:latest
 ```
 
 ## 6. Deploy
@@ -107,7 +107,7 @@ docker run -p 8080:8080 `
 
 | Message | Fix |
 |---|---|
-| `go.mod file not found in current directory` | You're not in `timoha-projects\backend`: `cd $HOME\timoha-projects\backend` |
+| `go.mod file not found in current directory` | You're not in `eneba-market\backend`: `cd $HOME\eneba-market\backend` |
 | `The token '&&' is not a valid statement separator` | Windows PowerShell 5.1: split the command into separate lines |
 | `'go' is not recognized` | Open a new PowerShell window after installing Go |
 | `bind: An attempt was made to access a socket…` / port in use | Another server is still running. Close it, or start on another port: `$env:PORT = '8081'` |
