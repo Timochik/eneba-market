@@ -1,5 +1,7 @@
 # AI session log
 
+> A readable, condensed version of the conversation: [AI-Conversation-Log-condensed.md](AI-Conversation-Log-condensed.md).
+>
 > **This is a summary, not the full log.** The assignment asks for the *full* conversation (all prompts and responses). Export it from the Claude conversation where this project was built (share link, or copy it into a `.md` file), and add any later sessions.
 
 | | |
